@@ -4,134 +4,130 @@
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #070b14;
+  font-family: "Segoe UI", sans-serif;
+  background: #060913;
   color: white;
 }
 
 /* HEADER */
 header {
-  padding: 16px;
-  text-align: center;
-  background: #0f1626;
-  border-bottom: 2px solid #00e0ff;
+  padding: 18px 24px;
+  background: #0c1222;
+  border-bottom: 1px solid rgba(0,255,255,0.2);
 }
 
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   font-weight: bold;
-  color: #00e0ff;
-  text-shadow: 0 0 8px #00e0ff;
+  font-size: 20px;
+  color: #b7eaff;
+}
+
+.logo-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: linear-gradient(135deg,#00f0ff,#7b5cff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-weight: bold;
+  box-shadow: 0 0 20px rgba(0,240,255,0.5);
 }
 
 /* HERO */
 .hero {
   text-align: center;
-  padding: 60px 20px;
-  background: radial-gradient(circle, #0f1c2e, #070b14);
+  padding: 90px 20px;
+  background: radial-gradient(circle at top,#111a33,#060913);
 }
 
 .hero h1 {
-  font-size: 28px;
-  color: #7cecff;
+  font-size: 32px;
+  background: linear-gradient(90deg,#7cecff,#b38cff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero p {
-  color: #9aa3b2;
+  color: #98a4c0;
+  margin-top: 10px;
+}
+
+.cta {
+  margin-top: 24px;
 }
 
 .cta button {
-  padding: 12px 20px;
+  padding: 14px 26px;
   margin: 8px;
-  border-radius: 8px;
+  border-radius: 10px;
   border: none;
   cursor: pointer;
+  font-weight: 600;
 }
 
 .primary {
-  background: #00e0ff;
+  background: linear-gradient(135deg,#00f0ff,#7b5cff);
   color: black;
+  box-shadow: 0 0 20px rgba(0,240,255,0.3);
 }
 
 .secondary {
   background: transparent;
-  border: 2px solid #00e0ff;
-  color: #00e0ff;
-}
-
-/* JOIN */
-.join {
-  padding: 30px 20px;
-  text-align: center;
-}
-
-.join input {
-  width: 100%;
-  padding: 14px;
-  border-radius: 8px;
-  border: none;
-  margin-bottom: 10px;
-}
-
-.full {
-  width: 100%;
+  border: 1px solid #7b5cff;
+  color: #b38cff;
 }
 
 /* STATS */
 .stats {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3,1fr);
   text-align: center;
-  padding: 30px 10px;
+  padding: 40px 10px;
   gap: 10px;
 }
 
 .stats h3 {
-  color: #00e0ff;
-  text-shadow: 0 0 6px #00e0ff;
+  color: #7cecff;
+  text-shadow: 0 0 12px rgba(0,240,255,0.4);
 }
 
-/* FEED */
+/* FEED + LEADERBOARD */
 .feed, .leaderboard {
-  padding: 20px;
+  padding: 30px 20px;
 }
 
-.post, .agent {
-  background: #10192b;
-  padding: 16px;
-  border-radius: 12px;
-  margin-top: 12px;
-  box-shadow: 0 0 10px rgba(0,224,255,0.15);
+.card, .agent {
+  background: rgba(20,28,50,0.8);
+  backdrop-filter: blur(10px);
+  padding: 18px;
+  border-radius: 14px;
+  margin-top: 14px;
+  border: 1px solid rgba(0,255,255,0.1);
+  box-shadow: 0 0 20px rgba(0,240,255,0.08);
 }
 
 /* FOOTER */
 footer {
   text-align: center;
   padding: 30px;
-  background: #0f1626;
-  color: #6c7a96;
+  background: #0c1222;
+  color: #6e7c99;
+  margin-top: 40px;
 }
 
 /* DESKTOP */
 @media (min-width: 768px) {
   .hero h1 {
-    font-size: 42px;
+    font-size: 48px;
   }
 
-  .join input {
-    width: 300px;
-  }
-
-  .full {
-    width: 200px;
-  }
-
-  .stats {
-    max-width: 800px;
-    margin: auto;
-  }
-
-  .feed, .leaderboard {
-    max-width: 800px;
+  .feed, .leaderboard, .stats {
+    max-width: 900px;
     margin: auto;
   }
 }
