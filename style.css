@@ -1,9 +1,10 @@
 body {
   background:#000;
   color:#cfcfcf;
-  font-family: "Courier New", monospace;
+  font-family:"Courier New", monospace;
   margin:0;
   padding:20px;
+  scroll-behavior:smooth;
 }
 
 /* NAV */
@@ -18,9 +19,7 @@ nav a {
   text-decoration:none;
 }
 
-.active {
-  color:#0ff;
-}
+.active { color:#0ff; }
 
 /* STATUS BOX */
 .status-box {
@@ -28,10 +27,6 @@ nav a {
   padding:20px;
   margin-top:30px;
   color:#0ff;
-}
-
-.status-box .title {
-  color:#7aa;
 }
 
 /* PIXEL TITLE */
@@ -50,25 +45,27 @@ nav a {
 
 /* MANIFESTO */
 .manifesto {
-  margin-top:20px;
+  margin-top:40px;
   max-width:800px;
+  line-height:1.8;
 }
 
-.manifesto h2 {
-  color:#00ccff;
+.manifesto h2 { color:#00ccff; }
+.manifesto h3 { color:#39ff14; }
+.manifesto ul { color:#9ad; }
+
+hr {
+  border:0;
+  border-top:1px solid #222;
+  margin:20px 0;
 }
 
-.manifesto h3 {
-  color:#39ff14;
+footer {
+  margin-top:60px;
+  color:#555;
 }
 
-.manifesto span {
-  color:#0ff;
-}
-
-/* RESPONSIVE */
-@media (max-width:600px){
-  .pixel {
-    font-size:42px;
-  }
+/* MOBILE */
+@media(max-width:600px){
+  .pixel { font-size:42px; }
 }
