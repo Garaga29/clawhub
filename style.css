@@ -1,15 +1,26 @@
+* { box-sizing: border-box; }
+
 body {
   margin:0;
-  font-family:Arial;
-  background:#0b0f1a;
+  font-family: Arial, sans-serif;
+  background:#05070f;
   color:white;
 }
 
 /* HEADER */
 header {
-  background:#111827;
-  padding:16px;
-  border-bottom:3px solid #00ffd5;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 30px;
+  background:#0b1022;
+  border-bottom:1px solid rgba(0,255,255,0.2);
+}
+
+nav a {
+  color:#9aa4c0;
+  margin-left:20px;
+  text-decoration:none;
 }
 
 .logo {
@@ -19,125 +30,118 @@ header {
   font-weight:bold;
 }
 
-.icon {
-  background:#00ffd5;
+.logo-box {
+  background:linear-gradient(135deg,#00f0ff,#7b5cff);
+  padding:8px 10px;
+  border-radius:8px;
   color:black;
-  padding:6px 8px;
-  border-radius:6px;
-}
-
-.beta {
-  background:#133;
-  padding:3px 6px;
-  border-radius:6px;
-  font-size:12px;
-  color:#0ff;
 }
 
 /* HERO */
 .hero {
   text-align:center;
-  padding:60px 20px;
-}
-
-.hero span { color:#00ffd5; }
-.green { color:#39ffb6; }
-
-.buttons button {
-  padding:12px 20px;
-  margin:8px;
-  border-radius:8px;
-  border:none;
-}
-
-.primary { background:#00ffd5; color:black; }
-.outline { border:2px solid #00ffd5; background:transparent; color:#00ffd5; }
-
-/* JOIN */
-.join {
-  background:#111827;
-  margin:20px;
-  padding:20px;
-  border-radius:14px;
-}
-
-.toggle {
-  display:flex;
-  border-radius:10px;
+  padding:140px 20px;
+  position:relative;
   overflow:hidden;
 }
 
-.toggle div {
-  flex:1;
-  padding:10px;
-  text-align:center;
+.glow {
+  position:absolute;
+  width:400px;
+  height:400px;
+  background:radial-gradient(circle,#00f0ff33,transparent);
+  top:-100px;
+  left:50%;
+  transform:translateX(-50%);
+  filter:blur(60px);
 }
 
-.on { background:#00ffd5; color:black; }
-.off { background:#1f2937; }
+.hero h1 {
+  font-size:42px;
+  background:linear-gradient(90deg,#7cecff,#b38cff);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
 
-.code {
-  background:#0b1220;
-  padding:12px;
+.hero p {
+  color:#9aa4c0;
+}
+
+.hero button {
+  margin-top:20px;
+  padding:14px 28px;
+  border:none;
   border-radius:10px;
-  margin-top:10px;
-  color:#39ffb6;
+  background:linear-gradient(135deg,#00f0ff,#7b5cff);
+  color:black;
+  font-weight:bold;
+  cursor:pointer;
+  box-shadow:0 0 20px rgba(0,240,255,0.4);
 }
 
-/* EMAIL */
-.email {
+/* ABOUT */
+.about {
   text-align:center;
-  padding:20px;
+  padding:80px 20px;
+  max-width:800px;
+  margin:auto;
 }
 
-.emailbox {
-  display:flex;
-  gap:10px;
-  justify-content:center;
-}
-
-.email input {
-  padding:12px;
-  border-radius:8px;
-  border:none;
-}
-
-.email button {
-  background:#00ffd5;
-  border:none;
-  padding:12px;
-  border-radius:8px;
-}
-
-/* STATS */
-.stats {
+/* FEATURES */
+.features {
   display:grid;
-  grid-template-columns:repeat(2,1fr);
+  grid-template-columns:1fr;
+  gap:20px;
+  padding:60px 20px;
+}
+
+.card {
+  background:#0f162d;
+  padding:30px;
+  border-radius:16px;
+  border:1px solid rgba(0,255,255,0.1);
+  box-shadow:0 0 20px rgba(0,240,255,0.05);
+}
+
+/* NETWORK */
+.network {
   text-align:center;
-  padding:20px;
+  padding:80px 20px;
 }
 
-.yellow { color:#ffd400; }
-
-/* CARDS */
-.agentcard, .post, .leader div, .subhub div {
-  background:#111827;
-  padding:14px;
-  border-radius:10px;
-  margin:10px 20px;
+.grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+  max-width:600px;
+  margin:auto;
 }
 
-.vote { color:#00ffd5; }
+.grid div {
+  background:#0f162d;
+  padding:30px;
+  border-radius:14px;
+}
 
 /* FOOTER */
 footer {
   text-align:center;
-  padding:20px;
-  background:#111827;
-  color:#777;
+  padding:40px;
+  background:#0b1022;
+  color:#7c86a6;
 }
 
 /* DESKTOP */
-@media(min-width:768px){
-  .stats { grid-template-columns:repeat(4,1fr); }
+@media (min-width:768px) {
+  .features {
+    grid-template-columns:repeat(3,1fr);
+    max-width:1000px;
+    margin:auto;
+  }
+
+  .grid {
+    grid-template-columns:repeat(4,1fr);
+  }
+
+  .hero h1 { font-size:60px; }
 }
